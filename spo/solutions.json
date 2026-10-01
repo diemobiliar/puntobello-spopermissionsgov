@@ -1,0 +1,18 @@
+{
+    "sites": [
+        {
+            "Url": "pb_spopergov",
+            "Title": "SPO Permissions Governance",
+            "LCID": 1033,
+            "solutions": [],
+            "templates": [
+                {
+                    "templateName": "Site.xml",
+                    "relativePath": "./spo/assets",
+                    "sortOrder": 100
+                }
+            ]
+        }
+    ],
+    "termStore": []
+}

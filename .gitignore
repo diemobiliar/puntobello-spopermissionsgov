@@ -1,0 +1,17 @@
+# Secrets / certificates
+.secrets/
+*.pfx
+*.pem
+*.key
+
+# azd environments (contain environment values)
+.azure/
+
+# Terraform local state and plugins
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+
+# OS / editor files
+.DS_Store

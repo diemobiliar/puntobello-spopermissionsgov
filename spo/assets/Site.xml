@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
+  <pnp:Preferences Generator="PnP.Framework, Version=1.18.0.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-58E8C8A4904F4177B700930CED1ECF1A">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-58E8C8A4904F4177B700930CED1ECF1A" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:WebSettings NoCrawl="false" WelcomePage="SitePages/Home.aspx" CommentsOnSitePagesDisabled="false" QuickLaunchEnabled="false" SearchScope="DefaultScope" SearchBoxInNavBar="Inherit" />
+      <pnp:Lists>
+        <pnp:ListInstance Title="My Recertification" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Recertification" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableAttachments="false" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Recertification/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Recertification/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Recertification/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{A8E99BC9-9C9A-4DBA-986D-6ED94EEDD9E0}" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Recertification/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=49">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="spo_Status" />
+                <FieldRef Name="spo_ApprovalActionBy" />
+                <FieldRef Name="spo_Approval" />
+                <FieldRef Name="spo_TargetUrl" />
+                <FieldRef Name="spo_TargetResourceName" />
+                <FieldRef Name="spo_TargetResourceId" />
+                <FieldRef Name="spo_PermissionScope" />
+                <FieldRef Name="spo_Permission" />
+                <FieldRef Name="spo_Reason" />
+                <FieldRef Name="spo_App_Id" />
+                <FieldRef Name="spo_AppDisplayname" />
+                <FieldRef Name="spo_TargetType" />
+                <FieldRef Name="spo_TargetName" />
+                <FieldRef Name="spo_MailStatus" />
+                <FieldRef Name="spo_nextRecertificationDate" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{9D7B553F-3FFE-498A-92EF-A1E266092577}" DefaultView="TRUE" Type="HTML" DisplayName="My Elements" Url="{site}/Lists/Recertification/MyElements.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=49">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="spo_Status" />
+                <FieldRef Name="spo_Approval" />
+                <FieldRef Name="spo_ApprovalActionBy" />
+                <FieldRef Name="spo_TargetUrl" />
+                <FieldRef Name="spo_TargetResourceName" />
+                <FieldRef Name="spo_TargetResourceId" />
+                <FieldRef Name="spo_PermissionScope" />
+                <FieldRef Name="spo_Permission" />
+                <FieldRef Name="spo_Reason" />
+                <FieldRef Name="spo_AppDisplayname" />
+                <FieldRef Name="spo_nextRecertificationDate" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="Status" FillInChoice="FALSE" Format="Dropdown" Name="spo_Status" Title="spo_Status" Type="Choice" ID="{1af6db82-2306-4bb4-863c-3ac7dbdcc446}" StaticName="spo_Status" ColName="nvarchar7" CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;flex-wrap&quot;:&quot;wrap&quot;,&quot;display&quot;:&quot;flex&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;4px 8px 5px 8px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;border-radius&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;24px&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;white-space&quot;:&quot;nowrap&quot;,&quot;margin&quot;:&quot;4px 4px 4px 4px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$spo_Status]&quot;,&quot;ApprovalRequested&quot;]},&quot;sp-css-backgroundColor-BgCornflowerBlue sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$spo_Status]&quot;,&quot;Approved&quot;]},&quot;sp-css-backgroundColor-BgMintGreen sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-MintGreenFont sp-field-fontSizeSmall sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$spo_Status]&quot;,&quot;Rejected&quot;]},&quot;sp-css-backgroundColor-BgPeach sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-PeachFont sp-field-fontSizeSmall sp-css-color-PeachFont&quot;,&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;]}]}]}},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;style&quot;:{&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;padding&quot;:&quot;0 3px&quot;},&quot;txtContent&quot;:&quot;[$spo_Status]&quot;,&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$spo_Status]&quot;,&quot;ApprovalRequested&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$spo_Status]&quot;,&quot;Approved&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$spo_Status]&quot;,&quot;Rejected&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-PeachFont&quot;,&quot;&quot;]}]}]}}}]}],&quot;templateId&quot;:&quot;BgColorChoicePill&quot;}" RowOrdinal="0" SourceID="{{listid:My Recertification}}" Version="2">
+              <CHOICES>
+                <CHOICE>New</CHOICE>
+                <CHOICE>ApprovalRequested</CHOICE>
+                <CHOICE>Approved</CHOICE>
+                <CHOICE>Rejected</CHOICE>
+                <CHOICE>Deleted</CHOICE>
+                <CHOICE>Unmanaged</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field DisplayName="Approval Action By" Format="Dropdown" List="UserInfo" Name="spo_ApprovalActionBy" Title="Approval Action By" Type="User" UserDisplayOptions="NamePhoto" UserSelectionMode="0" UserSelectionScope="0" ID="{f9fe064a-9da9-4d69-a6fc-532549828364}" Version="4" StaticName="spo_ApprovalActionBy" ColName="int1" RowOrdinal="0" SourceID="{{listid:My Recertification}}" />
+            <Field DisplayName="Approval" Format="Dropdown" MaxLength="255" Name="spo_Approval" Title="spo_Approval" Type="Text" ID="{f358b579-f7e2-4907-b4e5-b05b97b85557}" StaticName="spo_Approval" ColName="nvarchar8" RowOrdinal="0" CustomFormatter="{&quot;$schema&quot;:&quot;https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json&quot;,&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;flex-directon&quot;:&quot;row&quot;,&quot;justify-content&quot;:&quot;left&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;flex-wrap&quot;:&quot;nowrap&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;display&quot;:&quot;=if([$spo_Status] == 'ApprovalRequested' || [$spo_Status] == '', 'inherit','none')&quot;,&quot;flex-directon&quot;:&quot;row&quot;,&quot;justify-content&quot;:&quot;left&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;flex-wrap&quot;:&quot;wrap&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;button&quot;,&quot;customRowAction&quot;:{&quot;action&quot;:&quot;setValue&quot;,&quot;actionInput&quot;:{&quot;spo_Status&quot;:&quot;Approved&quot;,&quot;spo_ApprovalActionBy&quot;:&quot;@me&quot;}},&quot;attributes&quot;:{&quot;class&quot;:&quot;ms-fontColor-themePrimary ms-fontColor-themeDarker--hover&quot;},&quot;style&quot;:{&quot;border&quot;:&quot;none&quot;,&quot;background-color&quot;:&quot;transparent&quot;,&quot;cursor&quot;:&quot;pointer&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;flex-directon&quot;:&quot;row&quot;,&quot;justify-content&quot;:&quot;left&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;flex-wrap&quot;:&quot;wrap&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;attributes&quot;:{&quot;iconName&quot;:&quot;SkypeCircleCheck&quot;},&quot;style&quot;:{&quot;padding&quot;:&quot;4px&quot;,&quot;color&quot;:&quot;green&quot;}},{&quot;elmType&quot;:&quot;span&quot;,&quot;txtContent&quot;:&quot;Approve&quot;,&quot;style&quot;:{&quot;word-break&quot;:&quot;keep-all&quot;,&quot;color&quot;:&quot;black&quot;}}]},{&quot;elmType&quot;:&quot;button&quot;,&quot;customRowAction&quot;:{&quot;action&quot;:&quot;setValue&quot;,&quot;actionInput&quot;:{&quot;spo_Status&quot;:&quot;Rejected&quot;,&quot;spo_ApprovalActionBy&quot;:&quot;@me&quot;}},&quot;attributes&quot;:{&quot;class&quot;:&quot;ms-fontColor-themePrimary ms-fontColor-themeDarker--hover&quot;},&quot;style&quot;:{&quot;border&quot;:&quot;none&quot;,&quot;background-color&quot;:&quot;transparent&quot;,&quot;cursor&quot;:&quot;pointer&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;flex-directon&quot;:&quot;row&quot;,&quot;justify-content&quot;:&quot;left&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;flex-wrap&quot;:&quot;wrap&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;attributes&quot;:{&quot;iconName&quot;:&quot;Blocked&quot;},&quot;style&quot;:{&quot;padding&quot;:&quot;4px&quot;,&quot;color&quot;:&quot;red&quot;}},{&quot;elmType&quot;:&quot;span&quot;,&quot;txtContent&quot;:&quot;Reject&quot;,&quot;style&quot;:{&quot;word-break&quot;:&quot;keep-all&quot;,&quot;color&quot;:&quot;black&quot;}}]}]},{&quot;elmType&quot;:&quot;div&quot;,&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;txtContent&quot;:&quot;='This item is ' + toLowerCase([$spo_Status])&quot;,&quot;style&quot;:{&quot;padding-left&quot;:&quot;5px&quot;,&quot;word-break&quot;:&quot;keep-all&quot;}},{&quot;elmType&quot;:&quot;button&quot;,&quot;customRowAction&quot;:{&quot;action&quot;:&quot;setValue&quot;,&quot;actionInput&quot;:{&quot;spo_Status&quot;:&quot;Rejected&quot;,&quot;spo_ApprovalActionBy&quot;:&quot;@me&quot;}},&quot;attributes&quot;:{&quot;class&quot;:&quot;ms-fontColor-themePrimary ms-fontColor-themeDarker--hover&quot;},&quot;style&quot;:{&quot;border&quot;:&quot;none&quot;,&quot;background-color&quot;:&quot;transparent&quot;,&quot;cursor&quot;:&quot;pointer&quot;,&quot;display&quot;:&quot;=if([$spo_Status] == 'Approved', 'flex', 'none')&quot;,&quot;flex-direction&quot;:&quot;row&quot;,&quot;justify-content&quot;:&quot;left&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;flex-wrap&quot;:&quot;wrap&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;attributes&quot;:{&quot;iconName&quot;:&quot;Blocked&quot;},&quot;style&quot;:{&quot;padding&quot;:&quot;4px&quot;,&quot;color&quot;:&quot;red&quot;}},{&quot;elmType&quot;:&quot;span&quot;,&quot;txtContent&quot;:&quot;Reject&quot;,&quot;style&quot;:{&quot;word-break&quot;:&quot;keep-all&quot;,&quot;color&quot;:&quot;black&quot;}}]}],&quot;style&quot;:{&quot;display&quot;:&quot;=if([$spo_Status] == 'ApprovalRequested' || [$spo_Status] == '', 'none', 'flex')&quot;,&quot;flex-direction&quot;:&quot;row&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;flex-wrap&quot;:&quot;wrap&quot;}}]}" SourceID="{{listid:My Recertification}}" Version="6" />
+            <Field DisplayName="Target-Url" EnforceUniqueValues="FALSE" Indexed="FALSE" InternalName="spo_TargetUrl" Name="spo_TargetUrl" Required="FALSE" StaticName="spo_TargetUrl" Title="Target-Url" Type="URL" ID="{bb5e6287-1cf1-411c-986b-62fa9d4f1b58}" Version="3" ColName="nvarchar9" RowOrdinal="0" ColName2="nvarchar10" RowOrdinal2="0" SourceID="{{listid:My Recertification}}" />
+            <Field DisplayName="Permission Scope" Required="FALSE" Type="Choice" ID="{d28379a2-c8da-4e12-9b68-1e6a32625eb9}" StaticName="spo_PermissionScope" Name="spo_PermissionScope" ColName="nvarchar11" RowOrdinal="0" SourceID="{{listid:My Recertification}}">
+              <CHOICES>
+                <CHOICE>Files.SelectedOperations.Selected</CHOICE>
+                <CHOICE>ListItems.SelectedOperations.Selected</CHOICE>
+                <CHOICE>Lists.SelectedOperations.Selected</CHOICE>
+                <CHOICE>Sites.Selected (Graph)</CHOICE>
+                <CHOICE>Sites.Selected (SPO)</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field DisplayName="Permission" Required="FALSE" Type="Choice" ID="{ecb3ca87-788f-44e5-838f-e7b3cdd8dd2a}" StaticName="spo_Permission" Name="spo_Permission" ColName="nvarchar11" RowOrdinal="0" SourceID="{{listid:My Recertification}}">
+              <CHOICES>
+                <CHOICE>Read</CHOICE>
+                <CHOICE>Write</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field DisplayName="Reason" Required="FALSE" Type="Note" ID="{783ca759-69d6-4410-a01e-2a420cc8bda2}" StaticName="spo_Reason" Name="spo_Reason" ColName="ntext2" RowOrdinal="0" SourceID="{{listid:My Recertification}}" />
+            <Field DisplayName="App-Id" Required="FALSE" Type="Text" ID="{ee15d04b-caf2-4010-b4c1-5f443b6591c5}" StaticName="spo_App_Id" Name="spo_App_Id" ColName="nvarchar12" RowOrdinal="0" Version="2" SourceID="{{listid:My Recertification}}" CustomFormatter="" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+            <Field Type="Text" DisplayName="App Displayname" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{0114ba56-d406-4356-8df1-1eef7ae0b825}" StaticName="spo_AppDisplayname" Name="spo_AppDisplayname" ColName="nvarchar13" RowOrdinal="0" SourceID="{{listid:My Recertification}}" />
+            <Field Type="Text" DisplayName="Target Name" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{c6997c0b-d151-4508-918c-f71aad5e3572}" StaticName="spo_TargetName" Name="spo_TargetName" ColName="nvarchar14" RowOrdinal="0" SourceID="{{listid:My Recertification}}" />
+            <Field Type="Choice" DisplayName="Target Type" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" ID="{8ca526f8-1f27-4e2d-960f-c50ecd6008dc}" StaticName="spo_TargetType" Name="spo_TargetType" ColName="nvarchar15" RowOrdinal="0" SourceID="{{listid:My Recertification}}">
+              <CHOICES>
+                <CHOICE>SharePointSite</CHOICE>
+                <CHOICE>Teams</CHOICE>
+                <CHOICE>TeamsPrivateChannel</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Choice" DisplayName="MailStatus" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" ID="{1ac72fdd-d17f-4066-bff8-7700810c5b60}" StaticName="spo_MailStatus" Name="spo_MailStatus" ColName="nvarchar16" RowOrdinal="0" SourceID="{{listid:My Recertification}}">
+              <CHOICES>
+                <CHOICE>InitialMail</CHOICE>
+                <CHOICE>RecertificationMail</CHOICE>
+                <CHOICE>ReminderMail</CHOICE>
+                <CHOICE>ReminderMail2</CHOICE>
+                <CHOICE>ExpiredMail</CHOICE>
+                <CHOICE>ApprovedMail</CHOICE>
+                <CHOICE>RejectedMail</CHOICE>
+                <CHOICE>UnmanagedMail</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="DateTime" DisplayName="nextRecertificationDate" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Relative" ID="{357da7e5-d33d-4d77-8dd3-f81437ba751b}" StaticName="spo_nextRecertificationDate" Name="spo_nextRecertificationDate" ColName="datetime1" RowOrdinal="0" SourceID="{{listid:My Recertification}}" />
+            <Field Type="Text" DisplayName="Target Resource Name" Description="Display name of the list or document library, e.g. Documents." Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{a1b2c3d4-e5f6-7890-abcd-ef1234567890}" StaticName="spo_TargetResourceName" Name="spo_TargetResourceName" ColName="nvarchar17" RowOrdinal="0" SourceID="{{listid:My Recertification}}" CustomFormatter="" />
+            <Field Type="Text" DisplayName="Target Resource Id" Description="For ListItems.SelectedOperations.Selected: numeric item ID, e.g. 42. For Files.SelectedOperations.Selected: file path relative to the library root, e.g. Folder/Report.xlsx." Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="512" ID="{b2c3d4e5-f6a7-8901-bcde-f12345678901}" StaticName="spo_TargetResourceId" Name="spo_TargetResourceId" ColName="nvarchar18" RowOrdinal="0" SourceID="{{listid:My Recertification}}" CustomFormatter="" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" DisplayName="" />
+            <pnp:FieldRef ID="76d13cd2-1bae-45a5-8b74-545b87b65037" Name="_ColorTag" DisplayName="" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Requests" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Requests" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableAttachments="false" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Requests/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Requests/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Requests/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{A922E8B3-EE11-456D-8AF5-4C631ECD195C}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Requests/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=49">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="spo_AppId" />
+                <FieldRef Name="spo_TargetUrl" />
+                <FieldRef Name="spo_Permission" />
+                <FieldRef Name="spo_PermissionScope" />
+                <FieldRef Name="spo_TargetResourceName" />
+                <FieldRef Name="spo_TargetResourceId" />
+                <FieldRef Name="spo_RequestStatus" />
+                <FieldRef Name="spo_Reason" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Text" DisplayName="App-ID" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{645aea85-a3cc-4740-8e47-2ffe81d3f3cd}" StaticName="spo_AppId" Name="spo_AppId" ColName="nvarchar7" RowOrdinal="0" Version="1" SourceID="{{listid:Requests}}" />
+            <Field Type="URL" DisplayName="Target Url" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Hyperlink" ID="{3f65d7b9-17aa-45b3-b7f0-e38df4604136}" StaticName="spo_TargetUrl" Name="spo_TargetUrl" ColName="nvarchar8" RowOrdinal="0" ColName2="nvarchar9" RowOrdinal2="0" SourceID="{{listid:Requests}}" />
+            <Field DisplayName="Permission Scope" Required="TRUE" Type="Choice" ID="{d28379a2-c8da-4e12-9b68-1e6a32625eb9}" StaticName="spo_PermissionScope" Name="spo_PermissionScope" ColName="nvarchar11" RowOrdinal="0" SourceID="{{listid:My Recertification}}">
+              <CHOICES>
+                <CHOICE>Files.SelectedOperations.Selected</CHOICE>
+                <CHOICE>ListItems.SelectedOperations.Selected</CHOICE>
+                <CHOICE>Lists.SelectedOperations.Selected</CHOICE>
+                <CHOICE>Sites.Selected (Graph)</CHOICE>
+                <CHOICE>Sites.Selected (SPO)</CHOICE>
+              </CHOICES>
+            </Field>            
+            <Field Type="Choice" DisplayName="Permission" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" ID="{7f1e0664-86c9-4639-b192-b8947cb19fe4}" StaticName="spo_Permission" Name="spo_Permission" ColName="nvarchar10" RowOrdinal="0" SourceID="{{listid:Requests}}">
+              <CHOICES>
+                <CHOICE>Read</CHOICE>
+                <CHOICE>Write</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Choice" DisplayName="Request Status" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" ID="{c68008d6-ea26-4d3f-a5d4-4bbdc82b7663}" StaticName="spo_RequestStatus" Name="spo_RequestStatus" ColName="nvarchar11" RowOrdinal="0" SourceID="{{listid:Requests}}" CustomFormatter="" Version="1">
+              <Default>New</Default>
+              <CHOICES>
+                <CHOICE>New</CHOICE>
+                <CHOICE>Invalid</CHOICE>
+                <CHOICE>MovedToRecertificationList</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Note" DisplayName="Reason" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="FALSE" Sortable="FALSE" ID="{507b958c-6588-41ff-9f3f-a34b4555678e}" StaticName="spo_Reason" Name="spo_Reason" ColName="ntext2" RowOrdinal="0" SourceID="{{listid:Requests}}" />
+            <Field Type="Text" DisplayName="Target Resource Name" Description="Display name of the list or document library, e.g. Documents." Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{a1b2c3d4-e5f6-7890-abcd-ef1234567891}" StaticName="spo_TargetResourceName" Name="spo_TargetResourceName" ColName="nvarchar12" RowOrdinal="0" SourceID="{{listid:Requests}}" CustomFormatter="" />
+            <Field Type="Text" DisplayName="Target Resource Id" Description="For ListItems.SelectedOperations.Selected: numeric item ID, e.g. 42. For Files.SelectedOperations.Selected: file path relative to the library root, e.g. Folder/Report.xlsx." Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="512" ID="{b2c3d4e5-f6a7-8901-bcde-f12345678902}" StaticName="spo_TargetResourceId" Name="spo_TargetResourceId" ColName="nvarchar13" RowOrdinal="0" SourceID="{{listid:Requests}}" CustomFormatter="" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" DisplayName="" />
+            <pnp:FieldRef ID="76d13cd2-1bae-45a5-8b74-545b87b65037" Name="_ColorTag" DisplayName="Farbkennzeichnung" />
+          </pnp:FieldRefs>
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="true" ClearSubscopes="false">
+              <pnp:RoleAssignment Principal="SPOPermissionsGovUsers" RoleDefinition="Add Items" />
+            </pnp:BreakRoleInheritance>
+          </pnp:Security>
+        </pnp:ListInstance>
+      </pnp:Lists>
+      <pnp:ClientSidePages>
+        <pnp:ClientSidePage PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home" ThumbnailUrl="" PageName="Home.aspx">
+          <pnp:Header Type="None" LayoutType="FullWidthImage" ShowTopicHeader="false" ShowPublishDate="false" ShowBackgroundGradient="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;0bef2c7d-2526-4989-aefd-ff1024a4113f&quot;, &quot;title&quot;: &quot;Liste&quot;, &quot;description&quot;: &quot;Eine Liste von dieser Seite anzeigen.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:My Recertification}&quot;,&quot;showDefaultDocumentLibrary&quot;:false,&quot;selectedListUrl&quot;:&quot;{site}/Lists/Recertification&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/Recertification&quot;,&quot;webpartHeightKey&quot;:4,&quot;selectedViewId&quot;:&quot;{viewid:My Recertification,My Elements}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;My Recertification&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Divider" JsonControlData="{&quot;id&quot;: &quot;2161a1c6-db61-4731-b97c-3cdb303f7cbb&quot;, &quot;instanceId&quot;: &quot;d7291d6e-8daa-4ff6-8524-eb0531d42c48&quot;, &quot;title&quot;: &quot;Trennlinie&quot;, &quot;description&quot;: &quot;Fügen Sie eine Zeile hinzu, um Bereiche auf Ihrer Seite voneinander abzutrennen.&quot;, &quot;dataVersion&quot;: &quot;1.2&quot;, &quot;properties&quot;: {&quot;minimumLayoutWidth&quot;:1,&quot;length&quot;:100,&quot;weight&quot;:1}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="2161a1c6-db61-4731-b97c-3cdb303f7cbb" Order="2" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+            <pnp:Section Order="2" Type="TwoColumnLeft">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Text" ControlId="12c69b2a-5e21-4e5e-86a6-c56e03f33836" Order="1" Column="1">
+                  <pnp:CanvasControlProperties>
+                    <pnp:CanvasControlProperty Key="Text" Value="&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;The&amp;nbsp;Sites.Selected permission in SharePoint Online (SPO) is a specific permission that allows an application to access and manage selected SharePoint sites. This permission is part of the broader set of permissions that can be granted to applications when using the Entra ID app registrations.&lt;br&gt;It can perform actions such as reading and writing to the specified SharePoint sites, but only those that have been explicitly selected or granted access to. This helps ensure that applications only have access to the sites they need, enhancing security and compliance.&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;The recertification process applies to all applications that have been granted the Sites.Selected permissions either with Graph API oder SharePoint Online API. It includes procedures for validating, reviewing and renewing permissions as necessary.&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;&lt;strong&gt;Process Overview&lt;/strong&gt;&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;To use an Entra ID application registration with Sites.Selected API Permissions, the API permissions must be set in the Azure Portal by the application owner. Subsequently, the AD team must be informed so that consent for the permissions can be granted.&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;To grant read or write permissions on a SharePoint site or a Teams channel, a &lt;a href=&quot;{site}/_layouts/15/listforms.aspx?cid=Y2VkOGQwZTMtYTMxMy00ZTNkLTgxMDAtODAwZTZlZjNkZDRi&amp;amp;nav=MzQ5MGYyMzQtMjA0Ni00MjQ0LTk1ZDEtM2Y5NDk0ZDI5NDE4&quot; data-interception=&quot;off&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;new request&lt;/a&gt; must be created by the application owner.&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;(1) The request will then be verified:&lt;/p&gt;&lt;ul class=&quot;customListStyle&quot; style=&quot;list-style-type:disc;&quot;&gt;&lt;li data-list-item-id=&quot;e6426276bae9403e62f95c0b31a022f81&quot;&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;Test if app exists&lt;/p&gt;&lt;/li&gt;&lt;li data-list-item-id=&quot;e6483861be59b0062bd266a3ae5049a77&quot;&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;Test if owner is valid - requester must be app owner&lt;/p&gt;&lt;/li&gt;&lt;li data-list-item-id=&quot;ee0b1e76d87ba8bbc6f0071e041fe1df6&quot;&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;Test if api permission is set&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;(2) The owner of the site or Teams channel receives an email request to approve or deny the requested permissions for the site or Teams channel. If they do not respond to this request, reminder emails will be sent until the request is automatically rejected 35 days after its creation.&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;(3a) If the approver approves the request, the permissions will be automatically granted, and all involved owners will be notified. Additionally, a recertification date will be set, which is responsible for initiating the recertification process in future.&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;(3b) If the approver does not approve the request, no permissions will be granted, and all involved owners will be informed of the rejection.&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;&lt;strong&gt;Recertification&lt;/strong&gt;&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;The requests are regularly automatically reviewed, and upon reaching the recertification date, the recertification process is initiated. This process prompts the site or Teams channel owners to confirm the permissions requested in the application.&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;&lt;strong&gt;Involved Roles&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;customListStyle&quot; style=&quot;list-style-type:disc;&quot;&gt;&lt;li data-list-item-id=&quot;ebed6b385ec16b0e03f6dfab6cef09b08&quot;&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;&lt;strong&gt;Application Owners: &lt;/strong&gt;Responsible for providing information about the application and its usage of SharePoint sites.&lt;/p&gt;&lt;/li&gt;&lt;li data-list-item-id=&quot;edcebd8c668ae04b29f52952413967acd&quot;&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;&lt;strong&gt;Entra ID Admins: &lt;/strong&gt;Responsible for reviewing and consenting to the permissions requested by applications.&lt;/p&gt;&lt;/li&gt;&lt;li data-list-item-id=&quot;ea0eaf2b2ae4067373908bca830d4c036&quot;&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;&lt;strong&gt;Teams / Site Owners: &lt;/strong&gt;Provide insights on the relevance and necessity of the permissions for their respective sites.&lt;/p&gt;&lt;/li&gt;&lt;li data-list-item-id=&quot;e923658a83f0aec72f370b9cd750ca59b&quot;&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;&lt;strong&gt;SharePoint Online Admins: &lt;/strong&gt;Oversee the recertification process and ensure compliance.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;" />
+                  </pnp:CanvasControlProperties>
+                </pnp:CanvasControl>
+                <pnp:CanvasControl WebPartType="QuickLinks" JsonControlData="{&quot;id&quot;: &quot;c70391ea-0b10-4ee9-b2b4-006d3fcad0cd&quot;, &quot;instanceId&quot;: &quot;5e626b84-6938-4a8e-b970-38b2a0af1636&quot;, &quot;title&quot;: &quot;Quicklinks&quot;, &quot;description&quot;: &quot;Zeigen Sie eine Sammlung von Links zu Inhalten wie Dokumenten, Bildern, Videos und mehr in einer Vielzahl von Layouts mit Optionen für Symbole, Bilder und Zielgruppenadressierung an.&quot;, &quot;dataVersion&quot;: &quot;2.4&quot;, &quot;properties&quot;: {&quot;items&quot;:[{&quot;sourceItem&quot;:{&quot;itemType&quot;:2,&quot;fileExtension&quot;:&quot;&quot;,&quot;progId&quot;:&quot;&quot;},&quot;thumbnailType&quot;:2,&quot;id&quot;:1,&quot;description&quot;:&quot;&quot;,&quot;fabricReactIcon&quot;:{&quot;iconName&quot;:&quot;permissionssolid&quot;},&quot;altText&quot;:&quot;&quot;,&quot;rawPreviewImageMinCanvasWidth&quot;:32767,&quot;shouldOpenInNewTab&quot;:true}],&quot;isMigrated&quot;:true,&quot;layoutId&quot;:&quot;Button&quot;,&quot;shouldShowThumbnail&quot;:true,&quot;isTitleEnabled&quot;:true,&quot;imageWidth&quot;:100,&quot;buttonLayoutOptions&quot;:{&quot;showDescription&quot;:true,&quot;buttonTreatment&quot;:2,&quot;iconPositionType&quot;:2,&quot;textAlignmentVertical&quot;:2,&quot;textAlignmentHorizontal&quot;:2,&quot;linesOfText&quot;:1},&quot;listLayoutOptions&quot;:{&quot;showDescription&quot;:false,&quot;showIcon&quot;:true},&quot;waffleLayoutOptions&quot;:{&quot;iconSize&quot;:1,&quot;onlyShowThumbnail&quot;:false},&quot;hideWebPartWhenEmpty&quot;:true,&quot;dataProviderId&quot;:&quot;QuickLinks&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;Titel&quot;:&quot;New Request&quot;,&quot;iconPicker&quot;:&quot;permissionssolid&quot;,&quot;titleHTML&quot;:&quot;&lt;h2 class=\&quot;headingSpacingAbove headingSpacingBelow lineHeight1_4\&quot;&gt;&lt;span class=\&quot;fontSizeXLarge\&quot;&gt;New Sites.Selected Permission Request&lt;/span&gt;&lt;/h2&gt;&quot;,&quot;pane_link_button&quot;:0}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;New Sites.Selected Permission Request&quot;,&quot;items[0].title&quot;:&quot;New Request&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;https://{fqdn}{site}&quot;,&quot;items[0].sourceItem.url&quot;:&quot;https://{fqdn}{site}/_layouts/15/listform.aspx?PageType=8&amp;ListId=%7B{listid:Requests}%7D&amp;RootFolder={site}/Lists/Requests&amp;Source=https://{fqdn}{site}/Lists/Requests/AllItems.aspx&quot;},&quot;componentDependencies&quot;:{&quot;layoutComponentId&quot;:&quot;706e33c8-af37-4e7b-9d22-6e5694d92a6f&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="c70391ea-0b10-4ee9-b2b4-006d3fcad0cd" Order="1" Column="2" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+        </pnp:ClientSidePage>
+      </pnp:ClientSidePages>
+      <pnp:Security AssociatedOwnerGroup="{groupsitetitle} Owners" AssociatedMemberGroup="{groupsitetitle} Members" AssociatedVisitorGroup="{groupsitetitle} Visitors">
+        <pnp:SiteGroups>
+          <pnp:SiteGroup Title="SPOPermissionsGovUsers" Description="SharePoint Permissions Governance Users" Owner="{groupsitetitle} Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="true" />
+        </pnp:SiteGroups>
+        <pnp:Permissions>
+          <pnp:RoleDefinitions>
+            <pnp:RoleDefinition Name="Modify without Delete" Description="">
+              <pnp:Permissions>
+                <pnp:Permission>EmptyMask</pnp:Permission>
+                <pnp:Permission>ViewListItems</pnp:Permission>
+                <pnp:Permission>AddListItems</pnp:Permission>
+                <pnp:Permission>EditListItems</pnp:Permission>
+                <pnp:Permission>OpenItems</pnp:Permission>
+                <pnp:Permission>ViewVersions</pnp:Permission>
+                <pnp:Permission>ViewFormPages</pnp:Permission>
+                <pnp:Permission>Open</pnp:Permission>
+                <pnp:Permission>ViewPages</pnp:Permission>
+                <pnp:Permission>BrowseUserInfo</pnp:Permission>
+                <pnp:Permission>UseClientIntegration</pnp:Permission>
+                <pnp:Permission>UseRemoteAPIs</pnp:Permission>
+                <pnp:Permission>CreateAlerts</pnp:Permission>
+                <pnp:Permission>EditMyUserInfo</pnp:Permission>
+              </pnp:Permissions>
+            </pnp:RoleDefinition>
+            <pnp:RoleDefinition Name="Add Items" Description="">
+              <pnp:Permissions>
+                <pnp:Permission>AddListItems</pnp:Permission>
+                <pnp:Permission>ViewListItems</pnp:Permission>
+                <pnp:Permission>OpenItems</pnp:Permission>
+                <pnp:Permission>ViewFormPages</pnp:Permission>
+                <pnp:Permission>ViewPages</pnp:Permission>
+                <pnp:Permission>Open</pnp:Permission>
+              </pnp:Permissions>
+            </pnp:RoleDefinition>
+          </pnp:RoleDefinitions>
+        </pnp:Permissions>
+      </pnp:Security>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
